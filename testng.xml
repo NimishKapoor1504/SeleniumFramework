@@ -1,0 +1,7 @@
+<suite name="Home Page Westpac">
+    <test name="Nagivation Tests">
+        <classes>
+            <class name="tests.HomePageNavigation" />
+        </classes>
+    </test>
+</suite>
