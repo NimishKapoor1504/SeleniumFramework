@@ -1,25 +1,26 @@
 package tests;
 
 import base.BaseTest;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utils.ExtentReportManager;
 import utils.Log;
 
-public class HomePageNavigation extends BaseTest {
+public class CorporatePageNavigation extends BaseTest {
 
     @Test
     public void testHomePageNavigation() {
         HomePage homePage = new HomePage(driver);
 
         Log.info("HomePage navigation test");
-        test = ExtentReportManager.createTest("HomePage");
+        test = ExtentReportManager.createTest("CorporatePage");
 
         test.info("HomePage navigation to home page");
         System.out.println(driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Sign in to Westpac Online Banking");
+
+
 
         Log.info("Home Page Title: " + driver.getTitle());
         test.info("Navigation to business page");
@@ -40,8 +41,6 @@ public class HomePageNavigation extends BaseTest {
         Assert.assertEquals(driver.getTitle(), "Corporate Banking | Westpac");
         driver.navigate().back();
         homePage.getSignInButton().click();
-        test.pass("HomePage");
+        test.pass("CorporatePage");
     }
-
-
 }
