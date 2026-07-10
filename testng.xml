@@ -1,4 +1,4 @@
-<suite name="Home Page Westpac" parallel="methods" thread-count="4">
+<suite name="Home Page Westpac" parallel="methods" thread-count="2">
     <test name="Nagivation Tests">
         <classes>
             <class name="tests.HomePageNavigation" />

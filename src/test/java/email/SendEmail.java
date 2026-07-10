@@ -41,7 +41,7 @@ public class SendEmail {
             messageBodyPart.setText("This is a test email from Framework Practise");
 
             MimeBodyPart attachmentPart = new MimeBodyPart();
-            String filePath = System.getProperty("user.dir")+"/test-output/index.html";
+            String filePath = System.getProperty("user.dir")+"/reports/index.html";
             System.out.println("Report attached from path : "+filePath);
             attachmentPart.attachFile(new File(filePath));
 
