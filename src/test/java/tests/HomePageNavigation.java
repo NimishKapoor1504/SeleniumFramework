@@ -43,5 +43,4 @@ public class HomePageNavigation extends BaseTest {
         test.pass("HomePage");
     }
 
-
 }

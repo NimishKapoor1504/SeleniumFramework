@@ -34,6 +34,7 @@ public class ExtentReportManager {
             instance.attachReporter(reporter);
         }
         return instance;
+
     }
 
     public static ExtentTest createTest(String testName){
@@ -50,7 +51,6 @@ public class ExtentReportManager {
             String path = System.getProperty("user.dir")+"/screenshots/"+screenshotName+sdf.format(new Date())+".png";
             FileUtils.copyFile(src, new File(path));
             return path;
-
         } catch (WebDriverException | IOException e) {
             throw new RuntimeException(e);
         }
