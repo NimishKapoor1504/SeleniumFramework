@@ -12,6 +12,19 @@ public class HomePage {
     private By corporate = By.linkText("Corporate");
     private By signInButton = By.id("signin");
 
+    private By homePageSection = By.linkText("Home");
+
+    private By dropdown = By.id("signIn");
+
+
+    public WebElement dropdownselect() {
+        return driver.findElement(dropdown);
+    }
+
+    public WebElement homePageSection(){
+        return driver.findElement(homePageSection);
+    }
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }

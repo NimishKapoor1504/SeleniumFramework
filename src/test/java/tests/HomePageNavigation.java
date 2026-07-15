@@ -2,11 +2,15 @@ package tests;
 
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utils.ExtentReportManager;
 import utils.Log;
+
+import java.time.Duration;
 
 public class HomePageNavigation extends BaseTest {
 
@@ -23,7 +27,16 @@ public class HomePageNavigation extends BaseTest {
 
         Log.info("Home Page Title: " + driver.getTitle());
         test.info("Navigation to business page");
-        homePage.getBusinessLink().click();
+
+        if(homePage.getBusinessLink().isEnabled()){
+            homePage.getBusinessLink().click();
+        }
+        else{
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.elementToBeClickable(homePage.getBusinessLink()));
+            homePage.getBusinessLink().click();
+        }
+
         System.out.println(driver.getTitle());
         Log.info("Business Page Title: " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Business Banking | Westpac");
