@@ -42,5 +42,7 @@ public class CorporatePageNavigation extends BaseTest {
         driver.navigate().back();
         homePage.getSignInButton().click();
         test.pass("CorporatePage");
+
+
     }
 }

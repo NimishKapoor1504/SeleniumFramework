@@ -8,14 +8,19 @@ public class HomePage {
 
     private WebDriver driver;
 
-    private By businessLink = By.linkText("Business");
-    private By corporate = By.linkText("Corporate");
-    private By signInButton = By.id("signin");
+    private final By businessLink = By.linkText("Business");
+    private final By corporate = By.linkText("Corporate");
+    private final By signInButton = By.id("signin");
 
-    private By homePageSection = By.linkText("Home");
+    private final By homePageSection = By.linkText("Home");
 
-    private By dropdown = By.id("signIn");
+    private final By dropdown = By.id("signIn");
 
+    private final By whatsNew = By.linkText("What's new");
+
+    public WebElement whatsNewLink() {
+        return driver.findElement(whatsNew);
+    }
 
     public WebElement dropdownselect() {
         return driver.findElement(dropdown);

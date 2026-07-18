@@ -54,6 +54,8 @@ public class HomePageNavigation extends BaseTest {
         driver.navigate().back();
         homePage.getSignInButton().click();
         test.pass("HomePage");
+
+
     }
 
 }

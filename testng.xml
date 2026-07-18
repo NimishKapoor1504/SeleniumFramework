@@ -1,6 +1,8 @@
-<suite name="Home Page Westpac" parallel="tests" thread-count="1">
-    <test name="Home Nagivation Tests">
+<suite name="Home Page Westpac" parallel="classes" thread-count="3">
+    <test name="Home Navigation Tests">
         <classes>
+            <class name="tests.HomePageNavigation" />
+            <class name="tests.CorporatePageNavigation" />
             <class name="tests.HomePageNew" />
         </classes>
     </test>

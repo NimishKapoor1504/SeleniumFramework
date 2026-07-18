@@ -35,7 +35,7 @@ public class BaseTest {
             prop.load(fis);
 
             // Extract the URL and save it to a variable
-            url = prop.getProperty("westpacURL"); // or "app.url"
+            url = prop.getProperty("slikk"); // or "app.url"
             System.out.println("Westpac URL: " + url);
         } catch (IOException e) {
             System.err.println("Could not load properties file!");
