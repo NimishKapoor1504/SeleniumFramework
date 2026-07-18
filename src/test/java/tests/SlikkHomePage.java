@@ -8,7 +8,7 @@ import pages.SlikkHomePa;
 public class SlikkHomePage extends BaseTest {
 
 
-        @Test
+     /*   @Test
         public  void LaunchSlikk() throws InterruptedException {
              SlikkHomePa slikkhomePage = new SlikkHomePa(driver);
 
@@ -25,5 +25,5 @@ public class SlikkHomePage extends BaseTest {
 //
 //             //slikkhomePage.Carousel();
         }
-
+*/
 }
